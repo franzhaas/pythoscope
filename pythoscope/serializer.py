@@ -278,8 +278,13 @@ class SequenceObject(CompositeObject):
             self.constructor_format = self.type_formats_with_imports[type(obj)][0]
             self.imports = self.type_formats_with_imports[type(obj)][1]
 
-    def __repr__(self):
-        return "SequenceObject(%s)" % (self.constructor_format % self.contained_objects)
+#    def __eq__(self, other):
+#        return False
+           
+            
+#    def __repr__(self):
+#        import ipdb; ipdb.set_trace()
+#        return "SequenceObject(%s)" % (self.constructor_format % self.contained_objects)
 
 class MapObject(CompositeObject):
     """A mutable object that contains unordered mapping of key/value pairs.
